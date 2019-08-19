@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails 5.2.3 app for mathematical differentiation of polynomials with no other service dependencies.
 
-Things you may want to cover:
+Usage:
 
-* Ruby version
+```
+GET /differentiate/4/3/0/1
+```
 
-* System dependencies
+gives 200 and
 
-* Configuration
+```json
+{"expression":"12x^2+6x"}
+```
 
-* Database creation
+```
+GET /differentiate/a/b/c/d
+```
 
-* Database initialization
+gives a 422 and
 
-* How to run the test suite
+```json
+[{"code":null,"message":"one or more coefficients are not integers"}]
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
